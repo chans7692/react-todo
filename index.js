@@ -5,11 +5,13 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const expressJwt = require("express-jwt");
+const path = require("path");
 const PORT = process.env.PORT || 5000;
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use("/api", expressJwt({ secret: process.env.SECRET }));
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 //connect to db
 mongoose.set('useCreateIndex', true);
@@ -30,6 +32,10 @@ app.use((err, req, res, next) => {
         res.status(err.status)
     }
     return res.send({ message: err.message });
+});
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 app.listen(PORT, () => {
