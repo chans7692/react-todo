@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 
 //connect to db
 mongoose.set('useCreateIndex', true);
-mongoose.connect("mongodb://localhost:27017/todo-auth-example",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/todo-auth-example",
     { useNewUrlParser: true },
     (err) => {
         if (err) throw err;
