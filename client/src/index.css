@@ -15,7 +15,7 @@ main{
 }
 
 .navbar-wrapper{
-    width: 80%;
+    width: 300px;
     margin: 25px auto;
     display: flex;
     justify-content: space-around;
