@@ -38,8 +38,8 @@ class Signup extends Component {
     render() {
         return (
             <div className="form-wrapper">
-                <form onSubmit={this.handleSubmit}>
-                    <h3>Sign Up</h3>
+                <h3>Sign Up</h3>
+                <form className='sign-up' onSubmit={this.handleSubmit}>
                     <input
                         onChange={this.handleChange}
                         value={this.state.username}
@@ -52,7 +52,7 @@ class Signup extends Component {
                         name="password"
                         type="password"
                         placeholder="Password"/>
-                    <button type="submit">Create Account</button>
+                    <button className='sign-up-submit' type="submit">Create Account</button>
                 </form>
 
                 {

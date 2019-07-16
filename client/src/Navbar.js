@@ -10,18 +10,18 @@ function Navbar(props) {
                 !props.token ?
                     <React.Fragment>
                         <div className="nav-link">
-                            <Link to="/signup">Sign Up</Link>
+                            <button><Link to="/signup">Sign Up</Link></button>
                         </div>
 
                         <div className="nav-link">
-                            <Link to="/login">Log In</Link>
+                            <button><Link to="/login">Log In</Link></button>
                         </div>
 
                     </React.Fragment>
                 :
                     <React.Fragment>
                         <div className="nav-link">
-                            <Link to="/todos">Todos</Link>
+                            <button><Link to="/todos">Todos</Link></button>
                         </div>
 
                         <div className="nav-link">

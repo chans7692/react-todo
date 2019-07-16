@@ -12,6 +12,8 @@ main{
 
 .app-wrapper{
     height: 100vh;
+    width: 300px;
+    margin: auto;
 }
 
 .navbar-wrapper{
@@ -19,6 +21,22 @@ main{
     margin: 25px auto;
     display: flex;
     justify-content: space-around;
+}
+
+.nav-link a{
+    text-decoration: none;
+    color: black;
+}
+
+.login input, .sign-up input{
+    width: 100%;
+    margin: 8px 0;
+}
+
+.login-submit, .sign-up-submit{
+    width: 100%;
+    height: 25px;
+    margin: 8px 0;
 }
 
 form{
@@ -53,6 +71,7 @@ form h4 {
 
 .todo-item h3{
     font-size: 25px;
+    font-weight: normal;
     margin: 8px;
 }
 
@@ -65,4 +84,9 @@ form h4 {
 .delete-todo{
     padding: 0;
     -webkit-appearance: checkbox;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.3);
 }

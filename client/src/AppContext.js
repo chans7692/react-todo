@@ -16,7 +16,7 @@ export class AppContextProvider extends Component {
         this.state = {
             todos: [],
             user: JSON.parse(localStorage.getItem("user")) || {},
-            token: localStorage.getItem("token") || ""
+            token: localStorage.getItem("token") || "",
         }
     }
 
